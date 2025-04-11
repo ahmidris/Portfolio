@@ -12,6 +12,13 @@
    --text-black-700:#504e70;
 }
 
+body.dark{
+    --bg--black-900:#151515;
+    --bg--black-100:#222222;
+    --bg--black-50:#393939;
+    --text--black-900:#ffffff;
+    --text-black-700:#e9e9e9;  
+}
 body{
 
     line-height: 1.5;
@@ -141,7 +148,7 @@ ul{
 }
 
 .aside .logo a{
-    color: var(--text-black-900);
+    color: var(--text--black-900);
     font-weight: 700;
     padding: 15px 20px;
     font-size: 30px;
@@ -229,13 +236,14 @@ left: 0;
     font-size: 16px;
     font-weight: 600;
     display: block;
-    border-bottom: 1px solid var(--bg-black-50);
-    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg--black-50);
+    color: var(--text--black-900);
     padding: 5px 15px;
 }
-.aside .nav li a.active{
+.aside .nav li a:hover{
     color: var(--skin-color);
 }
+
 .aside .nav li a i{
     margin-right: 15px;
 }
@@ -286,8 +294,8 @@ h3.my-pro{
    width: 80px;
    border-bottom: 10px solid var(--skin-color);
    border-right: 10px solid var(--skin-color);
-   right: -1px;
-   bottom: 20px;
+   right: -40px;
+   bottom: -40px;
 }
 .home-img::before{
     content: ''; 
@@ -296,13 +304,15 @@ h3.my-pro{
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: 2px;
-    top: -20px;
+    left: -20px;
+    top: -40px;
 }
 .home .home-img img{
     margin: auto;
-    height: 300px;
     border-radius: 5px;
+    height: 350px;
+    width: 320px;
+
 }
 /* About */
 .about .about-content{
@@ -317,7 +327,7 @@ h3.my-pro{
     font-size: 24px;
     margin-bottom: 15px;
     font-weight: 700;
-    color: var(--text-black-900);
+    color: var(--text--black-900);
 }
 .about .about-content .about-text h3 span{
     color: var(--skin-color);
@@ -371,7 +381,7 @@ h3.my-pro{
   line-height: 40px;
   font-weight: 600;
   font-size: 16px;
-  color: var(--text-black-900);
+  color: var(--text--black-900);
    text-transform: capitalize;
 }
 .about .about-content .skills .skill-item .progress{
@@ -411,7 +421,7 @@ h3.my-pro{
     font-size: 24px;
     margin-bottom: 30px;
     font-weight: 700;
-    color: var(--text-black-900);
+    color: var(--text--black-900);
 }
 .about .about-content .timeline-box{
     flex: 0 0 100%;
@@ -585,7 +595,7 @@ padding-bottom: 40px;
 .contact .contact-info-item h4{
     font-size: 18px;
     font-weight: 700;
-    color: var(--text-black-900);
+    color: var(--text--black-900);
     text-transform: capitalize;
     margin: 15px 0 5px;
 }
@@ -645,3 +655,35 @@ padding-bottom: 40px;
         margin-left: 0;
     }
 }
+@media (max-width:991px){
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item{
+        flex: 0 0 100%;
+        max-width: 100%; 
+    }
+    .home .home-info{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+       display: none;
+
+    }
+}
+@media (max-width:767px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .experience,
+    .about .about-content .education,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} 

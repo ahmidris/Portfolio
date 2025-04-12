@@ -608,6 +608,7 @@ padding-bottom: 40px;
 .contact .contact-form{
     flex: 0 0 100%;
     max-width: 100%;
+
 }
 .contact .contact-form .col-6{
     flex: 0 0 50%;
@@ -630,6 +631,7 @@ padding-bottom: 40px;
     font-size: 16px;
     color: var(--text-black-700);
     transition: all 0.3s ease;
+    font-family: 'poppins';
 }
 .contact .contact-form .form-item .form-control:focus{
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
